@@ -32,7 +32,7 @@ jobs:
         username: ubuntu
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
-          docker pull yourusername/demo-app
+          docker pull doc013/demo-devops-app
           docker stop demo || true
           docker rm demo || true
-          docker run -d -p 80:80 --name demo yourusername/demo-app
+          docker run -d -p 80:80 --name demo doc013/demo-devops-app
